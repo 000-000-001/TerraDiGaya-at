@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 20px;
+}
+.body {
+  background-color: rgb(238, 208, 181);
+}
+.contanier {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  width: 100%;
+  min-height: 40px;
+  background-color: rgba(195, 211, 182, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 15px;
+  gap: 8px 15px;
+}
+.logoNavBar {
+  width: 108px;
+}
+.headerBtnGroup {
+  display: flex;
+  gap: 15px;
+}
+.a {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+  padding: 3px;
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: rgb(121, 0, 0);
+  cursor: pointer;
+  transition: 0.4s;
+  text-decoration: none;
+  align-items: center;
+}
+.navBtn:hover {
+  border-bottom: 2px solid rgb(91, 190, 10);
+}
+.sectionTitle {
+  font-size: 36px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  text-align: center;
+  padding-top: 20px;
+}
+.sectionDescription {
+  text-align: center;
+  color: rgba(20, 75, 20, 0.533);
+}
+.gridContanier {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "mainContent sideBarContent";
+  padding: 20px;
+  flex: 1 0 auto;
+}
+
+.mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  grid-area: mainContent;
+}
+.categoryCard {
+  width: 280px;
+  height: 380px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.mainCardImg {
+  width: 100%;
+  height: 180px;
+  border-radius: 10px;
+}
+.categoryCard:hover {
+  border-color: green;
+}
+.mainCategoryCardTitle {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  padding: 6px;
+  text-align: center;
+  color: rgb(121, 0, 0);
+}
+.mainCategoryCardDescription {
+  padding: 6px;
+  color: rgb(121, 0, 0);
+}
+.sidebarContent {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #9e2c44;
+  color: rgb(182, 45, 64);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  min-width: 300px;
+  gap: 20px;
+}
+.sidebarCard {
+  width: 89%;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.sidebarCardTitle {
+  font-family: cursive;
+  text-align: center;
+  padding: 10px;
+}
+.sidebarCardImg {
+  width: 100%;
+  border-radius: 10px;
+}
+.sidebarCardImg1 {
+  width: 100%;
+  margin-left: 15px;
+  align-items: center;
+  border-radius: 20px;
+}
+.sidebarCard:hover {
+  border: transparent;
+}
+.footer {
+  width: 100%;
+  min-height: 40px;
+  background-color: rgba(101, 184, 33, 0.75);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 15px;
+}
+.logoFooter {
+  width: 108px;
+}
+.footerAnchor {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 630px) {
+  .gridContanier {
+    grid-template-areas:
+      "mainContent"
+      "sidebarContent";
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .sidebarContent {
+    min-width: auto;
+  }
+  .footerAnchor {
+    font-size: 19px;
+  }
+}
+@media (max-width: 463px) {
+  .header {
+    justify-content: center;
+  }
+  .footer {
+    justify-content: center;
+  }
+}
+
+.li {
+  align-items: center;
+  margin: 1%;
+}
